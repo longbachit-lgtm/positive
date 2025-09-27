@@ -4,10 +4,10 @@ import { motion, useAnimation  } from "framer-motion";
 
 // List ảnh mèo (bạn thay link thật vào nhé)
 const cats = [
-  "../src/images/meo-01.png",
-  "../src/images/meo-02.png",
-  "../src/images/meo-03.png",
-  "../src/images/meo-04.png",
+  "/images/meo-01.png",
+  "/images/meo-02.png",
+  "/images/meo-03.png",
+  "/images/meo-04.png",
 ];
 
 // List quotes
@@ -83,7 +83,7 @@ export default function CatQuotesApp() {
 
       {/* Footer chân mèo */}
       <div className="flex justify-center gap-4 mb-4">
-        <img src="../src/images/CHAN.png" alt="paw" className="w-100" />
+        <img src="/images/CHAN.png" alt="paw" className="w-100" />
       </div>
     </div>
   );
