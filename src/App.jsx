@@ -84,7 +84,7 @@ export default function CatQuotesApp() {
 
       {/* Footer chân mèo */}
       <div className="flex justify-center gap-4 mb-4">
-        <img src="/images/CHAN.png" alt="paw" className="w-100" />
+        <img src="/images/CHAN.png" alt="paw" className="w-60" />
       </div>
     </div>
   );
