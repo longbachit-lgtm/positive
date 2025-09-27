@@ -76,7 +76,7 @@ export default function CatQuotesApp() {
       <motion.img
         src={current.cat}
         alt="cat"
-        className="w-80  object-contain"
+        className="  object-contain"
         animate={imgCtrl}
         initial={false}
         draggable={false}
