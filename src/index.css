@@ -56,14 +56,4 @@ body {
 }
 
 
-#box-cat img {
-  max-width: 92vw;
-  max-height: 60dvh !important;
-  /* ảnh không cao quá màn hình */
-  height: auto !important;
-}
 
-#foot {
-  position: relative;
-  top: -40px;
-}

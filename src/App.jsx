@@ -76,7 +76,7 @@ export default function CatQuotesApp() {
       <motion.img
         src={current.cat}
         alt="cat"
-        className="w-60  object-contain"
+        className="w-80  object-contain"
         animate={imgCtrl}
         initial={false}
         draggable={false}
@@ -84,7 +84,7 @@ export default function CatQuotesApp() {
 
       {/* Footer chân mèo */}
       <div id="foot" className="flex justify-center gap-4 mb-4 " >
-        <img src="/images/CHAN.png" alt="paw" className="w-80" />
+        <img src="/images/CHAN.png" alt="paw" className="w-90" />
       </div>
     </div>
   );
