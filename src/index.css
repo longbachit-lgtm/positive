@@ -34,3 +34,14 @@ body{
 }
 @media (max-width: 920px){ .layout{ grid-template-columns: 1fr; } }
 
+#box-cat {
+  width: 100vw;   /* chiếm toàn bộ chiều rộng màn hình */
+  height: 100vh;  /* chiếm toàn bộ chiều cao màn hình */
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden; /* ẩn nếu nội dung tràn ra ngoài */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}

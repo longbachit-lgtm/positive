@@ -59,6 +59,7 @@ export default function CatQuotesApp() {
       <div
       {...handlers}
       onClick={showRandom}
+      id="box-cat"
       className="flex flex-col items-center justify-between h-screen bg-[#fce8d5] p-6"
     >
       {/* Quote */}
