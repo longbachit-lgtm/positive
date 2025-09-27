@@ -60,7 +60,7 @@ export default function CatQuotesApp() {
       {...handlers}
       onClick={showRandom}
       id="box-cat"
-      className="flex flex-col items-center justify-between h-screen bg-[#fce8d5] px-5"
+      className="flex flex-col items-center justify-between  bg-[#fce8d5] px-5 w-screen h-screen overflow-hidden"
     >
       {/* Quote */}
       <motion.p

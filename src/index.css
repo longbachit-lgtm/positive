@@ -85,6 +85,8 @@ body {
   align-items: center;
   overflow: hidden;
   box-sizing: border-box;
+  overflow-y: hidden !important
+  
 }
 
 #box-cat>* {
@@ -94,6 +96,12 @@ body {
   max-height: 100%;
   /* giới hạn chiều cao không vượt cha */
   overflow: hidden;
+}
+
+#box-cat img {
+  max-width: 92vw;
+  max-height: 60dvh !important;    /* ảnh không cao quá màn hình */
+  height: auto !important ;
 }
 
 #foot {
