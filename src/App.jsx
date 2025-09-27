@@ -60,7 +60,7 @@ export default function CatQuotesApp() {
       {...handlers}
       onClick={showRandom}
       id="box-cat"
-      className="flex flex-col items-center justify-between h-screen bg-[#fce8d5] p-6"
+      className="flex flex-col items-center justify-between h-screen bg-[#fce8d5] px-5"
     >
       {/* Quote */}
       <motion.p
@@ -83,8 +83,8 @@ export default function CatQuotesApp() {
       />
 
       {/* Footer chân mèo */}
-      <div className="flex justify-center gap-4 mb-4">
-        <img src="/images/CHAN.png" alt="paw" className="w-60" />
+      <div id="foot" className="flex justify-center gap-4 mb-4 " >
+        <img src="/images/CHAN.png" alt="paw" className="w-80" />
       </div>
     </div>
   );
