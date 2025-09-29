@@ -54,7 +54,9 @@ body {
 }
 
 #img_cat {
-    height: 60vh;
+  height: 60vh;
+  position: relative;
+  left: -20px;
 }
 
 
@@ -63,4 +65,3 @@ body {
   position: relative;
   top: -30px;
 }
-
