@@ -87,9 +87,9 @@ export default function CatQuotesApp() {
       <AnimatePresence mode="wait">
         <motion.div
           key={`${current.cat}-${current.quote}`}
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 30 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -30 }}
           transition={{ duration: .7 }}
           className="flex flex-col items-center gap-4"
         >
