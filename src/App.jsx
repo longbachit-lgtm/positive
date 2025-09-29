@@ -90,7 +90,7 @@ export default function CatQuotesApp() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 30 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: .7 }}
           className="flex flex-col items-center gap-4"
         >
           <p className="text-center text-brown-700 text-lg font-medium mt-6" style={{ fontFamily: "AutumnInSeptember", fontSize: 45 }}>{current.quote}</p>
