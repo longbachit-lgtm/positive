@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
-import { motion, useAnimation  } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 // List ảnh mèo (bạn thay link thật vào nhé)
 const cats = [
@@ -39,14 +39,26 @@ export default function CatQuotesApp() {
     imgCtrl.start({ opacity: 1, y: 0, transition: { duration: 0.5 } });
   };
 
+  function getRandomOther(arr, current) {
+    if (arr.length <= 1) return current; // nếu chỉ có 1 phần tử thì thôi
+    let item;
+    do {
+      item = arr[Math.floor(Math.random() * arr.length)];
+    } while (item === current);
+    return item;
+  }
+
+
   // Hàm random
   const showRandom = () => {
-    const randomCat = cats[Math.floor(Math.random() * cats.length)];
-    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    setCurrent({ cat: randomCat, quote: randomQuote });
+    setCurrent((prev) => {
+      const randomCat = getRandomOther(cats, prev.cat);
+      const randomQuote = getRandomOther(quotes, prev.quote);
+      return { cat: randomCat, quote: randomQuote };
+    });
     playAnim();
-
   };
+
 
   // Swipe handlers
   const handlers = useSwipeable({
@@ -56,7 +68,7 @@ export default function CatQuotesApp() {
   });
 
   return (
-      <div
+    <div
       {...handlers}
       onClick={showRandom}
       id="box-cat"
