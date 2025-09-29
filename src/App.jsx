@@ -36,7 +36,7 @@ export default function CatQuotesApp() {
     ]);
     // chạy vào (fade + slide lên)
     quoteCtrl.start({ opacity: 1, x: 0, transition: { duration: 1 } });
-    imgCtrl.start({ opacity: 1, x: 0, transition: { duration: 1 } });
+    // imgCtrl.start({ opacity: 1, x: 0, transition: { duration: 1 } });
   };
 
   function getRandomOther(arr, current) {
@@ -75,13 +75,22 @@ export default function CatQuotesApp() {
       className="flex flex-col items-center justify-between  bg-[#fce8d5] px-5 w-screen h-screen overflow-hidden"
     >
 
+      {/* <motion.p
+        className="text-center text-brown-700 text-lg font-medium mt-6"
+        style={{ fontSize: "45px", fontFamily: "AutumnInSeptember" }}
+        animate={quoteCtrl}
+        initial={false} // không auto chạy lúc mount, ta tự điều khiển
+      >
+        {current.quote}
+      </motion.p> */}
+
       <AnimatePresence mode="wait">
         <motion.div
           key={`${current.cat}-${current.quote}`}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -30 }}
-          transition={{ duration: 0.35 }}
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: 30 }}
+          transition={{ duration: 0.5 }}
           className="flex flex-col items-center gap-4"
         >
           <p className="text-center text-brown-700 text-lg font-medium mt-6" style={{ fontFamily: "AutumnInSeptember", fontSize: 45 }}>{current.quote}</p>
