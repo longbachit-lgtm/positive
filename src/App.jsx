@@ -31,12 +31,12 @@ export default function CatQuotesApp() {
   const playAnim = async () => {
     // reset về trạng thái đầu (ẩn + lệch xuống)
     await Promise.all([
-      quoteCtrl.set({ opacity: 0, y: 50 }),
-      imgCtrl.set({ opacity: 0, y: 50 }),
+      quoteCtrl.set({ opacity: 0, x: -50 }),
+      imgCtrl.set({ opacity: 0, x: -50 }),
     ]);
     // chạy vào (fade + slide lên)
-    quoteCtrl.start({ opacity: 1, y: 0, transition: { duration: 0.5 } });
-    imgCtrl.start({ opacity: 1, y: 0, transition: { duration: 0.5 } });
+    quoteCtrl.start({ opacity: 1, x: 0, transition: { duration: 1 } });
+    imgCtrl.start({ opacity: 1, x: 0, transition: { duration: 1 } });
   };
 
   function getRandomOther(arr, current) {
