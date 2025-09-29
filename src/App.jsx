@@ -84,7 +84,7 @@ export default function CatQuotesApp() {
           transition={{ duration: 0.35 }}
           className="flex flex-col items-center gap-4"
         >
-          <p style={{ fontFamily: "AutumnInSeptember", fontSize: 45 }}>{current.quote}</p>
+          <p className="text-center text-brown-700 text-lg font-medium mt-6" style={{ fontFamily: "AutumnInSeptember", fontSize: 45 }}>{current.quote}</p>
           <img id="img_cat" src={current.cat} alt="cat" className="object-contain" />
         </motion.div>
       </AnimatePresence>
