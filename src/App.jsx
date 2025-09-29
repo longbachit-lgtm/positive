@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import { motion, useAnimation } from "framer-motion";
-
+import { AnimatePresence } from "framer-motion";
 // List ảnh mèo (bạn thay link thật vào nhé)
 const cats = [
   "/images/meo-01.png",
@@ -74,18 +74,32 @@ export default function CatQuotesApp() {
       id="box-cat"
       className="flex flex-col items-center justify-between  bg-[#fce8d5] px-5 w-screen h-screen overflow-hidden"
     >
+
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={`${current.cat}-${current.quote}`}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -30 }}
+          transition={{ duration: 0.35 }}
+          className="flex flex-col items-center gap-4"
+        >
+          <p style={{ fontFamily: "AutumnInSeptember", fontSize: 45 }}>{current.quote}</p>
+          <img id="img_cat" src={current.cat} alt="cat" className="object-contain" />
+        </motion.div>
+      </AnimatePresence>
       {/* Quote */}
-      <motion.p
+      {/* <motion.p
         className="text-center text-brown-700 text-lg font-medium mt-6"
         style={{ fontSize: "45px", fontFamily: "AutumnInSeptember" }}
         animate={quoteCtrl}
         initial={false} // không auto chạy lúc mount, ta tự điều khiển
       >
         {current.quote}
-      </motion.p>
+      </motion.p> */}
 
       {/* Cat image */}
-      <motion.img
+      {/* <motion.img
         src={current.cat}
         alt="cat"
         id="img_cat"
@@ -93,7 +107,7 @@ export default function CatQuotesApp() {
         animate={imgCtrl}
         initial={false}
         draggable={false}
-      />
+      /> */}
 
       {/* Footer chân mèo */}
       <div id="foot" className="flex justify-center gap-4 mb-4 " >
